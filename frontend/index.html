@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USI Airlines — Premium Air Travel</title>
+  <meta name="description" content="Book premium flights with USI Airlines. Fly to the world's finest destinations in economy, business, and first class." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader__logo">USI <span>Airlines</span></div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner fade-up">
+      <p class="hero__eyebrow">Premium Air Travel</p>
+      <h1 class="hero__title">Fly Beyond<br/><em>Expectations</em></h1>
+      <p class="hero__sub">Experience the pinnacle of air travel with USI Airlines. Business, first class, and economy — crafted for the discerning traveller.</p>
+      <div class="hero__actions">
+        <a href="flights.html" class="btn btn-primary btn-lg">Search Flights</a>
+        <a href="my-bookings.html" class="btn btn-outline btn-lg">My Trips</a>
+      </div>
+    </div>
+    <div class="hero__plane">✈</div>
+  </section>
+
+  <!-- Search Widget -->
+  <div class="container">
+    <div class="search-section">
+      <h2 class="search-section__title">Find your next flight</h2>
+      <form id="hero-search-form" novalidate>
+        <div class="search-grid">
+          <div class="form-group">
+            <label class="form-label" for="s-origin">From</label>
+            <input class="form-input" type="text" id="s-origin" placeholder="City or Airport" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="s-dest">To</label>
+            <input class="form-input" type="text" id="s-dest" placeholder="City or Airport" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="s-date">Departure Date</label>
+            <input class="form-input" type="date" id="s-date" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="s-pass">Passengers</label>
+            <input class="form-input" type="number" id="s-pass" value="1" min="1" max="9" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-bottom:1px">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Popular Destinations -->
+  <section class="section section--linen">
+    <div class="container">
+      <div class="section__header">
+        <p class="section-label">Trending Routes</p>
+        <h2 class="section__title">Popular Destinations</h2>
+      </div>
+      <div class="destinations-scroll" id="destinations-list"></div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header text-center">
+        <p class="section-label">Why Fly With Us</p>
+        <h2 class="section__title">The USI Difference</h2>
+      </div>
+      <div class="features-grid">
+        <div class="card feature-card">
+          <div class="feature-card__icon">🕐</div>
+          <h3 class="feature-card__title">On-Time Guarantee</h3>
+          <p class="feature-card__text">98.2% on-time departure rate. Your time is precious — we never waste it.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-card__icon">🛡️</div>
+          <h3 class="feature-card__title">Safety First</h3>
+          <p class="feature-card__text">Modern fleet, rigorous maintenance, top-rated safety standards globally.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-card__icon">💎</div>
+          <h3 class="feature-card__title">Premium Comfort</h3>
+          <p class="feature-card__text">Lie-flat beds in Business, chef-curated meals, and premium in-flight entertainment.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-card__icon">📞</div>
+          <h3 class="feature-card__title">24/7 Support</h3>
+          <p class="feature-card__text">Our dedicated support team is available around the clock for every journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cabin Classes -->
+  <section class="section section--linen">
+    <div class="container">
+      <div class="section__header text-center">
+        <p class="section-label">Travel Classes</p>
+        <h2 class="section__title">Choose Your Experience</h2>
+      </div>
+      <div class="cabin-grid">
+        <div class="card cabin-card">
+          <div class="cabin-icon">🪑</div>
+          <h3 class="cabin-name">Economy</h3>
+          <p class="cabin-desc">Comfortable seating with generous legroom and complimentary meals.</p>
+          <ul class="cabin-features">
+            <li class="cabin-feature">Complimentary meals & snacks</li>
+            <li class="cabin-feature">Personal entertainment screen</li>
+            <li class="cabin-feature">20kg checked baggage</li>
+          </ul>
+          <a href="flights.html" class="btn btn-outline-dark btn-full">Explore Economy</a>
+        </div>
+        <div class="card cabin-card cabin-card--featured">
+          <div class="cabin-icon">🥂</div>
+          <h3 class="cabin-name">Business</h3>
+          <p class="cabin-desc">Elevated travel with lie-flat beds, fine dining, and priority service.</p>
+          <ul class="cabin-features">
+            <li class="cabin-feature">Lie-flat seats &amp; bedding</li>
+            <li class="cabin-feature">Chef-curated multi-course meals</li>
+            <li class="cabin-feature">32kg checked baggage + lounge</li>
+          </ul>
+          <a href="flights.html" class="btn btn-primary btn-full">Explore Business</a>
+        </div>
+        <div class="card cabin-card">
+          <div class="cabin-icon">👑</div>
+          <h3 class="cabin-name">First Class</h3>
+          <p class="cabin-desc">The ultimate luxury experience — private suites, a la carte dining.</p>
+          <ul class="cabin-features">
+            <li class="cabin-feature">Private enclosed suites</li>
+            <li class="cabin-feature">À la carte fine dining</li>
+            <li class="cabin-feature">40kg baggage + chauffeur</li>
+          </ul>
+          <a href="flights.html" class="btn btn-outline-dark btn-full">Explore First</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div><div class="stat__num" data-target="50000" id="stat-passengers">0</div><p class="stat__label">Passengers Flown</p></div>
+        <div><div class="stat__num" data-target="200" id="stat-flights">0</div><p class="stat__label">Flights Monthly</p></div>
+        <div><div class="stat__num" data-target="15" id="stat-destinations">0</div><p class="stat__label">Destinations</p></div>
+        <div><div class="stat__num" data-target="98" id="stat-rate">0</div><p class="stat__label">On-Time Rate %</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to take off?</h2>
+      <p class="cta-sub">Book your next flight with USI Airlines and travel in unmatched comfort.</p>
+      <a href="flights.html" class="btn btn-dark btn-lg">Browse All Flights</a>
+    </div>
+  </section>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

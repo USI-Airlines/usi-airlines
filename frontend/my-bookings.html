@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Trips — USI Airlines</title>
+  <meta name="description" content="View and manage all your USI Airlines flight bookings." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/my-bookings.css" />
+</head>
+<body class="myb-page">
+
+  <div id="page-loader">
+    <div class="loader__logo">USI <span>Airlines</span></div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Header -->
+  <div class="myb-header">
+    <div class="container">
+      <p class="myb-header__eyebrow">Your Journeys</p>
+      <h1 class="myb-header__title">My Trips</h1>
+      <p class="myb-header__sub" id="myb-sub">Loading your bookings...</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container" style="padding-bottom:4rem">
+    <div class="myb-tabs">
+      <button class="myb-tab active" data-filter="all">All</button>
+      <button class="myb-tab" data-filter="confirmed">Confirmed</button>
+      <button class="myb-tab" data-filter="cancelled">Cancelled</button>
+    </div>
+    <div id="bookings-list"></div>
+  </div>
+
+  <!-- Cancel Modal -->
+  <div class="modal-overlay" id="cancel-modal">
+    <div class="modal cancel-modal">
+      <div class="modal__header">
+        <h3 class="modal__title">Cancel Booking</h3>
+        <button class="modal__close" onclick="closeModal()">×</button>
+      </div>
+      <p>Are you sure you want to cancel this booking? This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline-dark" onclick="closeModal()">Keep Booking</button>
+        <button class="btn btn-danger" id="confirm-cancel-btn">Yes, Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/my-bookings.js"></script>
+</body>
+</html>

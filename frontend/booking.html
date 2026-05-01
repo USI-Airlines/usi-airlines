@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Flight — USI Airlines</title>
+  <meta name="description" content="Complete your flight booking with USI Airlines." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body class="booking-page">
+
+  <div id="page-loader">
+    <div class="loader__logo">USI <span>Airlines</span></div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Steps Bar -->
+  <div class="steps-bar">
+    <div class="container">
+      <div class="steps">
+        <div class="step active" id="step-ind-1">
+          <div class="step__num">1</div>
+          <div class="step__label">Passenger Details</div>
+        </div>
+        <div class="step__line"></div>
+        <div class="step" id="step-ind-2">
+          <div class="step__num">2</div>
+          <div class="step__label">Review &amp; Pay</div>
+        </div>
+        <div class="step__line"></div>
+        <div class="step" id="step-ind-3">
+          <div class="step__num">3</div>
+          <div class="step__label">Confirmation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div id="booking-content"></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

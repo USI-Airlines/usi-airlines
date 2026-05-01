@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Flights — USI Airlines</title>
+  <meta name="description" content="Search and book flights with USI Airlines. Compare prices, schedules, and find the best route." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/flights.css" />
+</head>
+<body class="flights-page">
+
+  <div id="page-loader">
+    <div class="loader__logo">USI <span>Airlines</span></div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="flights-search-bar">
+    <div class="container">
+      <form id="search-form" novalidate>
+        <div class="flights-search-inner">
+          <div class="form-group">
+            <label class="form-label" for="f-origin">From</label>
+            <input class="form-input" type="text" id="f-origin" placeholder="City or Airport" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-dest">To</label>
+            <input class="form-input" type="text" id="f-dest" placeholder="City or Airport" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-date">Date</label>
+            <input class="form-input" type="date" id="f-date" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-pass">Passengers</label>
+            <input class="form-input" type="number" id="f-pass" value="1" min="1" max="9" style="width:90px" />
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Layout -->
+  <div class="container">
+    <div class="flights-layout">
+
+      <!-- Sidebar Filters -->
+      <aside class="filters-sidebar">
+        <div class="filters-title">
+          Filters <span class="filters-reset" id="reset-filters">Reset</span>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label">Sort By</span>
+          <div>
+            <span class="filter-chip active" data-sort="price">Price ↑</span>
+            <span class="filter-chip" data-sort="departure">Earliest</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label">Time of Day</span>
+          <div>
+            <span class="filter-chip" data-time="morning">Morning</span>
+            <span class="filter-chip" data-time="afternoon">Afternoon</span>
+            <span class="filter-chip" data-time="evening">Evening</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label">Max Price (PKR)</span>
+          <input type="range" class="price-slider" id="price-slider" min="5000" max="500000" step="5000" value="500000" />
+          <div class="price-range-labels">
+            <span>PKR 5,000</span>
+            <span id="price-val">Any</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Results -->
+      <main>
+        <div class="results-header">
+          <p class="results-count" id="results-count">Loading flights...</p>
+          <div class="sort-options" id="sort-options"></div>
+        </div>
+        <div id="flights-results"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/flights.js"></script>
+</body>
+</html>

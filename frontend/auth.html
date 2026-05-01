@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — USI Airlines</title>
+  <meta name="description" content="Sign in or create your USI Airlines account to book premium flights." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="auth-page">
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader__logo">USI <span>Airlines</span></div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <div class="auth-card">
+    <!-- Logo -->
+    <div class="auth-logo">
+      <span class="auth-logo__icon">✈</span>
+      <div class="auth-logo__name">USI <span>Airlines</span></div>
+      <div class="auth-logo__tagline">Premium Air Travel</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+      <button class="auth-tab" id="tab-register" onclick="switchTab('register')">Create Account</button>
+    </div>
+
+    <!-- Login Form -->
+    <form class="auth-form active" id="form-login" novalidate>
+      <div>
+        <h2 class="auth-form__title">Welcome back</h2>
+        <p class="auth-form__sub">Sign in to access your bookings</p>
+      </div>
+      <div id="login-error" class="auth-error"></div>
+      <div class="form-group">
+        <label class="form-label" for="login-email">Email Address</label>
+        <input class="form-input" type="email" id="login-email" placeholder="you@example.com" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="login-password">Password</label>
+        <input class="form-input" type="password" id="login-password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-full btn-lg" id="login-btn">Sign In</button>
+    </form>
+
+    <!-- Register Form -->
+    <form class="auth-form" id="form-register" novalidate>
+      <div>
+        <h2 class="auth-form__title">Create account</h2>
+        <p class="auth-form__sub">Join USI Airlines for exclusive benefits</p>
+      </div>
+      <div id="register-error" class="auth-error"></div>
+      <div class="form-group">
+        <label class="form-label" for="reg-name">Full Name</label>
+        <input class="form-input" type="text" id="reg-name" placeholder="John Doe" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="reg-email">Email Address</label>
+        <input class="form-input" type="email" id="reg-email" placeholder="you@example.com" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="reg-password">Password</label>
+        <input class="form-input" type="password" id="reg-password" placeholder="Min. 6 characters" required />
+        <div class="pw-strength">
+          <div class="pw-bar" id="pb1"></div>
+          <div class="pw-bar" id="pb2"></div>
+          <div class="pw-bar" id="pb3"></div>
+        </div>
+        <span class="pw-label" id="pw-label"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="reg-confirm">Confirm Password</label>
+        <input class="form-input" type="password" id="reg-confirm" placeholder="Repeat password" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-full btn-lg" id="register-btn">Create Account</button>
+    </form>
+
+    <p class="auth-footer">
+      Protected by USI Airlines &mdash; <a href="index.html">Return home</a>
+    </p>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
